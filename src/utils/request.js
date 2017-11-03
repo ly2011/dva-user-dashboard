@@ -1,4 +1,4 @@
-import fetch from "dva/fetch";
+import fetch from 'dva/fetch';
 
 function parseJSON(response) {
   return response.json();
@@ -29,11 +29,11 @@ export default async function request(url, options) {
 
   const ret = {
     data,
-    headers: {}
+    headers: {},
   };
 
-  if (response.headers.get("x-total-count")) {
-    ret.headers["x-total-count"] = response.headers.get("x-total-count");
+  if (response.headers.get('x-total-count')) {
+    ret.headers['x-total-count'] = response.headers.get('x-total-count');
   }
   return ret;
 }
