@@ -24,3 +24,11 @@ export function patch(id, values) {
     },
   });
 }
+
+// 添加用户
+export function create(values) {
+  return request('/api/users', {
+    method: 'POST',
+    body: JSON.stringify(values),
+  });
+}
